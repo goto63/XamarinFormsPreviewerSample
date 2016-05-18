@@ -4,6 +4,13 @@ using Xamarin.Forms;
 
 namespace XamarinFormsPreviewerSample
 {
+    public static class ViewModelLocator
+    {
+        static MonkeysViewModel monkeysVM;
+        public static MonkeysViewModel MonkeysViewModel
+        => monkeysVM ?? (monkeysVM = new MonkeysViewModel());
+    }
+
     public class App : Application
     {
         public App()
